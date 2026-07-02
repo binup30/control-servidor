@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+    <title>LoPokeMasturbas | Servidor</title>
+    <style>
+        /* Estilos Generales y Fondo de Video */
+        body { 
+            font-family: 'Minecraftia', sans-serif; 
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            items-center: center;
+            overflow: hidden;
+        }
+
+        /* Video de fondo (Mewtwo Cobblemon) */
+        #bg-video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1; /* Lo pone detrás de todo */
+            object-fit: cover; /* Cubre toda la pantalla sin deformarse */
+            filter: brightness(0.4); /* Oscurece el video para que el texto resalte */
+        }
+
+        /* La caja principal (Panel) */
+        .box { 
+            background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente oscuro */
+            padding: 60px; 
+            border: 6px solid #ffffff; 
+            border-radius: 15px; 
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            text-align: center;
+            max-width: 600px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Título (Estilo Minecraft / Color Pokémon) */
+        h1 { 
+            color: #ff5555; /* Un rojo más vibrante para que resalte en la oscuridad */
+            text-shadow: 3px 3px #ffffff, 6px 6px #000000; /* Sombra doble para efecto 3D */
+            font-size: 4em; 
+            margin-bottom: 20px; 
+            letter-spacing: 3px;
+        }
+
+        p {
+            color: #e0e0e0;
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* El Botón (Estilo Panel) */
+        .button { 
+            padding: 25px 50px; 
+            font-size: 24px; 
+            background: #ffffff; 
+            color: #cc0000; /* Rojo oscuro profesional */
+            border: 4px solid #cc0000; 
+            cursor: pointer; 
+            font-weight: bold;
+            font-family: 'Minecraftia', sans-serif;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover { 
+            background: #cc0000; 
+            color: white; 
+            transform: scale(1.05); 
+            box-shadow: 0 0 20px rgba(255, 85, 85, 0.7);
+        }
+
+        /* Animación de aparición suave */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ajuste para móviles */
+        @media (max-width: 700px) {
+            .box { padding: 30px; width: 80%; }
+            h1 { font-size: 2.5em; }
+            .button { padding: 15px 30px; font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video de Fondo (Bucle infinito) -->
+    <!-- He seleccionado un video de Cobblemon como ejemplo. Puedes cambiarlo por otro .mp4 -->
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="https://cdn.discordapp.com/attachments/1144781237771948075/1145216360833331372/Mewtwo_Cobblemon_Background.mp4" type="video/mp4">
+        <!-- Fallback por si el video no carga -->
+        <img src="https://images.alphacoders.com/133/1336786.png" alt="Mewtwo BackgroundFallback">
+    </video>
+
+    <div class="box">
+        <h1>LoPokeMasturbas</h1>
+        <p>El servidor definitivo de Cobblemon te espera.</p>
+        <a class="button" href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=binup30/LPM">Iniciar Aventura</a>
+    </div>
+
+</body>
+</html>
